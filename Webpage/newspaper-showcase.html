@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Newspapers Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: #e74c3c;
+        }
+
+        .newspaper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .newspaper-box {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .newspaper-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .newspaper-logo {
+            width: 180px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+            overflow: hidden;
+        }
+
+        .newspaper-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .newspaper-name {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .newspaper-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="category">
+        <h2 class="category-title">National Newspapers</h2>
+        <div class="newspaper-grid">
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944669/4098/" alt="Kantipur Logo">
+                </div>
+                <div class="newspaper-name">Kantipur</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944666/4088/" alt="The Kathmandu Post Logo">
+                </div>
+                <div class="newspaper-name">The Kathmandu Post</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944670/4101/" alt="Nagarik Logo">
+                </div>
+                <div class="newspaper-name">Nagarik</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946445/4116/" alt="My Republica Logo">
+                </div>
+                <div class="newspaper-name">Republica</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741942342/4072/" alt="Gorkhapatra Logo">
+                </div>
+                <div class="newspaper-name">Gorkhapatra</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741942342/4071/" alt="The Rising Nepal Logo">
+                </div>
+                <div class="newspaper-name">The Rising Nepal</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946444/4113/" alt="Annapurna Post Logo">
+                </div>
+                <div class="newspaper-name">Annapurna Post</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944668/4096/" alt="Himalaya Times Logo">
+                </div>
+                <div class="newspaper-name">Himalaya Times</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944665/4083/" alt="Rajdhani Logo">
+                </div>
+                <div class="newspaper-name">Rajdhani</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944671/4103/" alt="Nepal Samacharpatra Logo">
+                </div>
+                <div class="newspaper-name">Nepal Samacharpatra</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944670/4102/" alt="Naya Patrika Logo">
+                </div>
+                <div class="newspaper-name">Naya Patrika</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946687/4121/" alt="The Himalayan Times Logo">
+                </div>
+                <div class="newspaper-name">The Himalayan Times</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Regional Newspapers</h2>
+        <div class="newspaper-grid">
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944670/4099/" alt="Madhyanha Logo">
+                </div>
+                <div class="newspaper-name">Madhyanha</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944666/4089/" alt="Sourya Dainik Logo">
+                </div>
+                <div class="newspaper-name">Sourya Dainik</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944665/4086/" alt="Samadhan Logo">
+                </div>
+                <div class="newspaper-name">Samadhan</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944668/4095/" alt="Janasawal Logo">
+                </div>
+                <div class="newspaper-name">Janasawal</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944668/4094/" alt="Janakpur Today Logo">
+                </div>
+                <div class="newspaper-name">Janakpur Today</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944673/4109/" alt="Purwanchal Logo">
+                </div>
+                <div class="newspaper-name">Purwanchal</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946446/4120/" alt="Yug Aahwan Logo">
+                </div>
+                <div class="newspaper-name">Yug Aahwan</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944671/4106/" alt="Prabhab Dainik Logo">
+                </div>
+                <div class="newspaper-name">Prabhab Dainik</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944853/4110/" alt="Sajha Bisaunee Logo">
+                </div>
+                <div class="newspaper-name">Sajha Bisaunee</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944667/4092/" alt="Farak Logo">
+                </div>
+                <div class="newspaper-name">Farak Samachar</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1742099361/4156/" alt="Gorakha Logo">
+                </div>
+                <div class="newspaper-name">Gorakha</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946444/4114/" alt="Hetauda Sandesh Logo">
+                </div>
+                <div class="newspaper-name">Hetauda Sandesh</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944667/4093/" alt="Jaleshwor Today Logo">
+                </div>
+                <div class="newspaper-name">Jaleshwor Today</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946445/4117/" alt="Kalpristha Logo">
+                </div>
+                <div class="newspaper-name">Kalpristha News</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944670/4102/" alt="Pokhara Patra Logo">
+                </div>
+                <div class="newspaper-name">Pokhara Patra National Daily</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944671/4105/" alt="Prateek Logo">
+                </div>
+                <div class="newspaper-name">Prateek Daily</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944672/4107/" alt="Pratidin Logo">
+                </div>
+                <div class="newspaper-name">Pratidin National Daily</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944672/4108/" alt="Purba Sandesh Logo">
+                </div>
+                <div class="newspaper-name">Purba Sandesh National Daily</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944665/4085/" alt="Sajha Kura News Logo">
+                </div>
+                <div class="newspaper-name">Sajha Kura News</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944666/4087/" alt="Sajhedari Logo">
+                </div>
+                <div class="newspaper-name">Sajhedari Daily</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944665/4084/" alt="Rajbiraj Logo">
+                </div>
+                <div class="newspaper-name">Rajbiraj Dainik</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944670/4100/" alt="Mechikali Logo">
+                </div>
+                <div class="newspaper-name">Mechikali Sandes</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944666/4090/" alt="Yougbodh Logo">
+                </div>
+                <div class="newspaper-name">Yougbodh</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944669/4097/" alt="Karobaar Logo">
+                </div>
+                <div class="newspaper-name">Karobaar</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Local/Community Newspapers</h2>
+        <div class="newspaper-grid">
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946445/4118/" alt="Kaya Kairan Logo">
+                </div>
+                <div class="newspaper-name">Kayakaira</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944669/4093/" alt="Dhamaka Logo">
+                </div>
+                <div class="newspaper-name">Dhamaka Daily</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741946444/4115/" alt="Dainik Nepalgunj Logo">
+                </div>
+                <div class="newspaper-name">Dainik Nepalgunj</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944667/4092/" alt="Butwal Today Logo">
+                </div>
+                <div class="newspaper-name">Butwal Today</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944669/4093/" alt="Dhamaka Logo">
+                </div>
+                <div class="newspaper-name">Dhamaka Daily</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Business/Financial Newspapers</h2>
+        <div class="newspaper-grid">
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944669/4097/" alt="Karobaar Logo">
+                </div>
+                <div class="newspaper-name">Karobaar</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741942342/4073/" alt="Arthik Abhiyan Logo">
+                </div>
+                <div class="newspaper-name">Arthik Abhiyan</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741942906/4076/" alt="Arthik Dainik Logo">
+                </div>
+                <div class="newspaper-name">Arthik Dainik</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Others (Specialized Focus)</h2>
+        <div class="newspaper-grid">
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944665/4083/" alt="Rajdhani Logo">
+                </div>
+                <div class="newspaper-name">Rajdhani</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944853/4110/" alt="Sajha Bisaunee Logo">
+                </div>
+                <div class="newspaper-name">Sajha Bisaunee</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944665/4085/" alt="Sajha Kura News Logo">
+                </div>
+                <div class="newspaper-name">Sajha Kura News</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741942906/4080/" alt="Adarsha Samaj Logo">
+                </div>
+                <div class="newspaper-name">Adarsha Samaj</div>
+            </div>
+            <div class="newspaper-box">
+                <div class="newspaper-logo">
+                    <img src="https://suchanaa.com/filer/canonical/1741944853/4111/" alt="Mission Today Logo">
+                </div>
+                <div class="newspaper-name">Mission Today</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
