@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suchanaa.com Package Invitation</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --secondary: #0f766e;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --success: #059669;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            padding: 20px 0;
+        }
+
+        h3 {
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .benefits ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .benefits ul li {
+            margin-bottom: 12px;
+            position: relative;
+            color: #1e293b;
+        }
+
+        .benefits ul li span {
+            color: #2563eb;
+        }
+
+        .benefits-posting ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .benefits-posting li {
+            margin-bottom: 10px;
+            position: relative;
+            color: #1e293b;
+        }
+
+        .benefits-posting li span {
+            color: #2563eb;
+        }
+
+        .rate-section {
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        .rate-heading {
+            color: #2563eb;
+            padding: 0;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+
+        .vacancy-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .vacancy-link:hover {
+            background-color: #1d4ed8;
+        }
+
+        .rate-content {
+            display: block;
+            margin-bottom: 0;
+            width: 100%;
+        }
+
+        .package-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 12px;
+            background: #f8fafc;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .package-table th,
+        .package-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            width: 25%;
+        }
+
+        .package-table th {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 18px 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .package-table td:first-child {
+            font-weight: bold;
+        }
+
+        .savings {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .additional-notes, .terms {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8fafc;
+        }
+
+        .additional-notes h4 {
+            color: #2563eb;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .additional-notes ul.main-list {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .additional-notes ul.main-list > li {
+            margin-bottom: 15px;
+            position: relative;
+            color: #2563eb;
+        }
+
+        .additional-notes ul.main-list > li span,
+        .additional-notes ul.main-list > li {
+            color: #1e293b;
+        }
+
+        .additional-notes ul.sub-list {
+            list-style-type: circle;
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        .additional-notes ul.sub-list > li {
+            margin-bottom: 8px;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .additional-notes ul.sub-list > li span {
+            color: var(--text-dark);
+        }
+
+        .terms {
+            background-color: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 8px 25px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .terms h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 0 0 8px 0;
+        }
+
+        .terms ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .terms li {
+            margin-bottom: 6px;
+        }
+
+        .terms li:last-child {
+            margin-bottom: 0;
+        }
+
+        .notice-rate {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .notice-rate ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .notice-rate ul > li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .notice-rate ul > li:before {
+            content: "•";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+        }
+
+        .signature {
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .signature .regards {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .signature .info {
+            color: var(--text-dark);
+        }
+
+        .copyright {
+            text-align: left;
+            color: var(--text-light);
+            padding-top: 0;
+            margin-top: 0;
+            border-top: none;
+            line-height: 1.3;
+        }
+
+        .copyright p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .copyright p + p {
+            margin-top: 2px;
+        }
+
+        .copyright a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+
+        .bold-item {
+            font-weight: 600;
+        }
+
+        .benefits-posting {
+            margin: 25px 0;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+            padding: 15px 0;
+        }
+
+        .intro-text a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .intro-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .logo-container {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .benefits h3, .benefits-posting h3 {
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .benefits ul, .benefits-posting ul {
+            margin-top: 0.5rem;
+        }
+
+        .highlight-text {
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .highlight-text:after {
+            content: "";
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+                border-radius: 8px;
+            }
+
+            .content {
+                padding: 10px 0;
+                line-height: 2;
+                font-size: 0.72rem;
+            }
+
+            .intro-text {
+                text-align: justify;
+                font-size: 0.72rem;
+                line-height: 2;
+            }
+
+            h3 {
+                font-size: 0.99rem;
+                margin-bottom: 1rem;
+                color: #2563eb;
+                line-height: 2;
+            }
+
+            .rate-heading {
+                padding: 0;
+                font-size: 0.99rem;
+                line-height: 2;
+            }
+
+            .vacancy-link {
+                padding: 10px 20px;
+                font-size: 0.72rem;
+            }
+
+            .package-table th {
+                padding: 12px 10px;
+                font-size: 0.72rem;
+                white-space: nowrap;
+                background-color: #2563eb !important;
+            }
+
+            .package-table td {
+                padding: 10px;
+                font-size: 0.72rem;
+                line-height: 2;
+            }
+
+            .additional-notes h4, .terms h4 {
+                font-size: 0.855rem;
+                margin-bottom: 10px;
+                color: #2563eb;
+            }
+
+            .benefits ul li, .benefits-posting li {
+                margin-bottom: 8px;
+                font-size: 0.72rem;
+                line-height: 2;
+            }
+
+            .notice-rate ul > li {
+                padding-left: 20px;
+                margin-bottom: 8px;
+                font-size: 0.72rem;
+                line-height: 2;
+            }
+
+            .additional-notes ul.main-list > li,
+            .additional-notes ul.sub-list > li {
+                font-size: 0.72rem;
+                line-height: 2;
+            }
+
+            .terms li {
+                line-height: 2;
+            }
+
+            .copyright {
+                font-size: 0.675rem;
+                line-height: 1.3;
+                text-align: center;
+            }
+
+            .copyright p + p {
+                margin-top: 1px;
+            }
+
+            .logo-container {
+                text-align: center;
+                margin-bottom: 8px;
+            }
+
+            .logo-container img {
+                max-width: 160px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .container {
+                padding: 12px;
+                margin: 5px;
+            }
+
+            .package-table th {
+                padding: 10px 8px;
+                font-size: 0.675rem;
+            }
+
+            .package-table td {
+                padding: 8px;
+                font-size: 0.675rem;
+            }
+
+            .benefits ul li, .benefits-posting li,
+            .notice-rate ul > li,
+            .additional-notes ul.main-list > li,
+            .additional-notes ul.sub-list > li,
+            .intro-text,
+            .content {
+                font-size: 0.675rem;
+            }
+
+            .copyright {
+                font-size: 0.63rem;
+                text-align: center;
+            }
+
+            .logo-container {
+                text-align: center;
+            }
+
+            .logo-container img {
+                max-width: 140px;
+            }
+        }
+
+        /* Remove all the :before pseudo-elements since we're using native bullets */
+        .benefits ul li:before,
+        .benefits-posting li:before,
+        .additional-notes ul.main-list > li:before,
+        .additional-notes ul.sub-list > li:before {
+            content: none;
+        }
+
+        .package-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Email client overrides */
+        @media screen and (max-width: 600px) {
+            .package-table {
+                width: 100%;
+                margin: 15px 0;
+            }
+            
+            .package-table th,
+            .package-table td {
+                padding: 10px;
+            }
+        }
+
+        /* Gmail-specific fixes */
+        u + .body .package-table {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        /* Outlook-specific fixes */
+        .ExternalClass .package-table {
+            width: 100% !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Dear [Client's Name], Address</p>
+
+            <p class="intro-text">We are pleased to introduce <a href="https://www.suchanaa.com" target="_blank">Suchanaa.com</a>, a dynamic platform connecting job seekers with top opportunities. With thousands of active users searching for their next role, we offer a trusted space for organizations like yours to promote vacancies and attract the best talent.</p>
+
+            <div class="benefits">
+                <h3>Why Choose Suchanaa.com for Your Vacancy Announcements?</h3>
+                <ul>
+                    <li><span class="highlight-text">Wide Reach</span>: Attract professionals, fresh graduates, and experienced candidates.</li>
+                    <li><span class="highlight-text">Targeted Visibility</span>: Your vacancies will be prominently displayed in our dedicated Vacancies section.</li>
+                    <li><span class="highlight-text">User-Friendly Experience</span>: Easily post and manage your listings.</li>
+                    <li><span class="highlight-text">Cost-Effective Solutions</span>: Affordable advertising plans tailored to your needs.</li>
+                </ul>
+            </div>
+
+            <div class="benefits-posting">
+                <h3>Benefits of Posting Vacancies:</h3>
+                <ul>
+                    <li>Reach the right candidates faster.</li>
+                    <li>Strengthen your employer branding.</li>
+                    <li>Save time and connect directly with qualified applicants.</li>
+                </ul>
+            </div>
+
+            <a href="https://suchanaa.com/vacancies/" target="_blank" class="vacancy-link">Post Your Vacancy</a>
+
+            <div class="rate-section">
+                <div class="rate-heading">Vacancy Rate</div>
+                <div class="rate-content">
+                    <table class="package-table" width="100%" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 100%;">
+                        <tr>
+                            <th width="25%" style="width: 25%">Package</th>
+                            <th width="25%" style="width: 25%">Basic</th>
+                            <th width="25%" style="width: 25%">Standard</th>
+                            <th width="25%" style="width: 25%">Premium</th>
+                        </tr>
+                        <tr>
+                            <td width="25%" style="width: 25%"><strong>Price</strong></td>
+                            <td width="25%" style="width: 25%">Rs. 1500</td>
+                            <td width="25%" style="width: 25%">Rs. 7000</td>
+                            <td width="25%" style="width: 25%">Rs. 13000</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" style="width: 25%"><strong>Vacancy Posts</strong></td>
+                            <td width="25%" style="width: 25%">1</td>
+                            <td width="25%" style="width: 25%">5</td>
+                            <td width="25%" style="width: 25%">10</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" style="width: 25%"><strong>Featured Posts</strong></td>
+                            <td width="25%" style="width: 25%">None</td>
+                            <td width="25%" style="width: 25%">2</td>
+                            <td width="25%" style="width: 25%">4</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" style="width: 25%"><strong>Post Duration</strong></td>
+                            <td width="25%" style="width: 25%">15 Days</td>
+                            <td width="25%" style="width: 25%">15 Days Each</td>
+                            <td width="25%" style="width: 25%">15 Days Each</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" style="width: 25%"><strong>Access to CVs</strong></td>
+                            <td width="25%" style="width: 25%">After Post Expiration</td>
+                            <td width="25%" style="width: 25%">After Post Expiration</td>
+                            <td width="25%" style="width: 25%">After Post Expiration</td>
+                        </tr>
+                        <tr>
+                            <td width="25%" style="width: 25%"><strong>Validity</strong></td>
+                            <td width="25%" style="width: 25%">15 Days</td>
+                            <td width="25%" style="width: 25%">3 Months</td>
+                            <td width="25%" style="width: 25%">6 Months</td>
+                        </tr>
+                    </table>
+
+                    <div class="additional-notes">
+                        <h4>Additional Notes:</h4>
+                        <ul class="main-list">
+                            <li>Extra Vacancy Posts:
+                                <ul class="sub-list">
+                                    <li>Rs. 1,400 per extra post for Basic Package</li>
+                                    <li>Rs. 1,300 per extra post for Standard Package</li>
+                                    <li>Rs. 1,250 per extra post for Premium Package</li>
+                                </ul>
+                            </li>
+                            <li><span class="bold-item">Feature a Post:</span> Rs. 1,000 per post</li>
+                            <li><span class="bold-item">Repost a Vacancy:</span> Rs. 1,000 per post (up to 15 days)</li>
+                            <li><span class="bold-item">Extend Post Duration:</span> Rs. 500 to increase the duration</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms">
+                        <h4>Terms:</h4>
+                        <ul>
+                            <li>Packages must be used within their validity period.</li>
+                            <li>Unused posts will not carry over; a new package will need to be purchased.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div class="logo-container">
+                    <img src="https://suchanaa.com/filer/canonical/1740984420/2382/" alt="Suchanaa.com Logo">
+                </div>
+                <p>© 2024 Suchanaa.com. All rights reserved.</p>
+                <p><a href="https://www.suchanaa.com" target="_blank">www.suchanaa.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
